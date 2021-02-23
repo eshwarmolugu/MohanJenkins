@@ -9,9 +9,9 @@ pipeline {
 		}
 		stage("Code Quality") {
 			steps {
-			 withSonarQubeEnv('LocalSonar') {
-                sh 'mvn clean package sonar:sonar'
-              }	
+			 	withSonarQubeEnv('LocalSonar') {
+					sh '/Applications/SonarScanner/bin/sonar-scanner -Dproject.settings=/Applications/sonar-scanner.properties'
+              			}	
 			}
 		}
 		stage("UAT") {
