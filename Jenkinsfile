@@ -10,7 +10,7 @@ pipeline {
 		stage("Code Quality") {
 			steps {
 			 	withSonarQubeEnv('LocalSonar') {
-					sh '/Applications/SonarScanner/bin/sonar-scanner -Dproject.settings=/Applications/sonar-scanner.properties'
+					sh '/Users/eshwar.molugu/git/app-devops-jenkins/work/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/bin/sonar-scanner -Dproject.settings=/Users/eshwar.molugu/git/app-devops-jenkins/work/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/conf/sonar-scanner.properties'
               			}	
 			}
 		}
